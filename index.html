@@ -6,27 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <title>AraniTime</title>
+
+    <title>PukuaWeather</title>
 </head>
 
 <body>
+    <div class="shape1"></div>
+    <div class="shape2"></div>
     <div class="container">
-        <div class="shape1"></div>
-        <div class="shape2"></div>
-        <div class="weather">
-            <div class="search">
-                <input class="input" placeholder="Digite o nome da cidade">
-                <button onclink="updatecity()"><span class="material-symbols-outlined">search</span></button>
+        <div class="search">
+            <input id="input" type='text' placeholder="Digite o nome da cidade" spellcheck='false'>
+            <button onclick="updatecity()">
+                <span class="material-symbols-outlined">
+                    search
+                    </span>
+            </button>
+        </div>
+        <div class="weather" id="weather"> 
+            <img id="icon" src="images/01d.png"> 
+            <div class="temperature">
+            <span id="temp">--</span>&deg;C
             </div>
             <div class="location">
-                <span id="city">Cidade</span>, <span id="country">País</span>
+                <span class="material-symbols-outlined">
+                    location_on </span>
+                <span  id="city">Cidade</span>,
+                <span id="country">País</span>
             </div>
-            <div class="temperature">
-                <span id="temp">--</span>&deg;C
-            </div>
-            <div class="container-description">
-                <div class="description" id="description">Descrição do tempo</div>
-                <div class="icon"> ICONE AQUI  </div>
+            <div class="details-container">
+                <span class="material-symbols-outlined">
+                    humidity_low
+                </span>
+                <div>
+                    <p id = "humidity" class="humidity">--</p>
+                </div>
+                <span class="material-symbols-outlined">
+                    air
+                </span>
+                <div>
+                    <p id="wind" class="wind">--</p>
+                </div>
             </div>
         </div>
     </div>
